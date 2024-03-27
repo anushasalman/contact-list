@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import ContactList from "./MyTenContacts";
 import './App.css';
+import './index.css';
 
 const App = () => {
   const [contactList, setContactList] = useState([]);
@@ -20,10 +21,10 @@ const App = () => {
 
   return (
     <>
-      <h2>Contact List</h2>
+    <section>Contact List</section>
       
       <ContactList contactList={contactList} email= {contactList} phone={contactList.phone} />
-    </>
+      </>
   )
 }
 
