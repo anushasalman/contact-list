@@ -8,7 +8,7 @@ const ContactList = ({ contactList }) => {
           })
         }
       </ul>
-      
+
       <ul>
         {
           contactList.map((contact) => {

@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
 import ContactList from "./MyTenContacts";
 import './App.css';
-import './index.css';
 
 const App = () => {
   const [contactList, setContactList] = useState([]);
