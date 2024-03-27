@@ -1,13 +1,28 @@
-//import { useState } from 'react'
-import './App.css'
+import {useEffect, useState} from "react";
+import ContactList from "./MyTenContacts";
+import './App.css';
 
-function App() {
+const App = () => {
+  const [contactList, setContactList] = useState([]);
+  const API_USERS_URL ='https://jsonplaceholder.typicode.com/users';
+
+  useEffect(() => {
+    const getContactList = async() => {
+      const response = await fetch(API_USERS_URL);
+      const json = await response.json();
+      setContactList(json)
+
+    }
+
+    getContactList();
+  }, [])
+
 
   return (
     <>
-      <div>
-      <h1>Contact List</h1>
-      </div>
+      <h2>Contact List</h2>
+      
+      <ContactList contactList={contactList} email= {contactList} phone={contactList.phone} />
     </>
   )
 }
