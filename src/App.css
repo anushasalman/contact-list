@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 2rem;
   display: flex;
- text-align: center;
   color:rgb(38, 42, 153);
   will-change: filter;
   transition: filter 300ms;
